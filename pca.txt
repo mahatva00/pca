@@ -1,0 +1,80 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Maps Demo</title>
+    <style>
+      #map {
+        height: 800px;
+        width: 100%;
+      }
+      #search-bar {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 1000;
+        background-color: #fff;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+      #search-input {
+        width: 200px;
+        height: 30px;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+      }
+      #search-button {
+        height: 30px;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        background-color: #4CAF50;
+        color: #fff;
+        cursor: pointer;
+      }
+      #search-button:hover {
+        background-color: #3e8e41;
+      }
+      #marker-list {
+        position: absolute;
+        top: 50px;
+        left: 10px;
+        z-index: 1000;
+        background-color: #fff;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+      #marker-list ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      #marker-list li {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+      }
+      #marker-list li:last-child {
+        border-bottom: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <div id="search-bar">
+      <input id="search-input" type="text" placeholder="Search for a place">
+      <button id="search-button">Search</button>
+    </div>
+    <div id="marker-list">
+      <ul id="marker-list-ul"></ul>
+    </div>
+    <script src="script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl7IDjUizijRKM3c9SVnOYDI0iz6nl7DI&callback=initMap"></script>
+  </body>
+</html>
